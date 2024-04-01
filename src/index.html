@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Dashboard</title>
+</head>
+
+
+<body>
+
+    <div id="main" class="w-full">
+        <div class="page1 min-h-screen relative">
+            <nav
+                class="w-full  bg-blue-600 px-4 py-1 text-white flex flex-col sm:flex-row items-center justify-between">
+                <img src="./North Super.png" alt="" class="h-[15vh]">
+                <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
+            </nav>
+            <div id="body" class="flex items-center h-[83vh]">
+                <!-- left -->
+                <div class="bg-slate-400 h-full">
+                    <button id="toggleBtn" class="text-white px-3 py-2 bg-slate-400 hover:bg-slate-500 rounded-lg">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul id="toggleItems"
+                        class="flex flex-col text-white items-start justify-start uppercase font-semibold px-1 py-5 bg-slate-400">
+                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                            Dashboard</li>
+                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                            Register</li>
+                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                            tip</li>
+                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                            history</li>
+                    </ul>
+                </div>
+
+                <!-- right -->
+                <div class="w-full px-5 py-5">
+                    <!-- top -->
+                    <form id="date-fillter-form" class="w-full py-2 flex gap-4">
+                        <div class="flex gap-3"><span class="text-lg">From: </span> <input type="date" name="from-date"
+                                class="border border-black rounded-lg "></div>
+                        <div class="flex gap-3"><span class="text-lg">To: </span> <input type="date" name="from-date"
+                                class="border border-black rounded-lg "></div>
+                    </form>
+                    <!-- bottom -->
+                    <section id="dashboard" class="w-full p-5 bg-red-200 grid grid-cols-3 gap-10">
+                        <div id="tip_modal_open"
+                            class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2 cursor-pointer">
+                            <h3 class="text-2xl font-semibold">Total Tip</h3>
+                            <hr class="border-spacing-2 w-[80%]">
+                            <h3 class="text-xl">40</h3>
+                        </div>
+                        <div class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2">
+                            <h3 class="text-2xl font-semibold">Under Process</h3>
+                            <hr class="border-spacing-2 w-[80%]">
+                            <h3 class="text-xl">10</h3>
+                        </div>
+                        <div class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2">
+                            <h3 class="text-2xl font-semibold">Delivered</h3>
+                            <hr class="border-spacing-2 w-[80%]">
+                            <h3 class="text-xl">30</h3>
+                        </div>
+
+
+                        <!-- modal -->
+                        <div id="tip_modal"
+                            class=" absolute w-[95%] h-[95%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 p-5 rounded-2xl">
+                            <!-- top -->
+                            <div class="w-full flex justify-between">
+                                <h2 class="text-4xl font-semibold px-4 text-white">Tip Details</h2>
+                                <!-- close btn -->
+                                <button id="tip_modal_close"
+                                    class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xl mr-2 rounded-xl">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                            <br>
+                            <hr>
+                            <br>
+                            <!-- Table -->
+
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                                id="mid">
+                                <theadaz
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Tip Number
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Status
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Print
+                                        </th>
+                                    </tr>
+                                </theadaz>
+                                <tbody>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            00001
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            processing
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
+                                                    class="fa-solid fa-print"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            00002
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
+                                                    class="fa-solid fa-print"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Table END -->
+
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="./javascripts/index.js"></script>
