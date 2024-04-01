@@ -580,6 +580,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[90px\] {
   height: 90px;
 }
@@ -674,6 +678,14 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -716,6 +728,14 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-32 {
+  gap: 8rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .whitespace-nowrap {

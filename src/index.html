@@ -22,7 +22,7 @@
                 <img src="./North Super.png" alt="" class="h-[15vh]">
                 <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
             </nav>
-            <div id="body" class="flex items-center h-[83vh]">
+            <div id="body" class="flex items-start h-[83vh]">
                 <!-- left -->
                 <div class="bg-slate-400 h-full">
                     <button id="toggleBtn" class="text-white px-3 py-2 bg-slate-400 hover:bg-slate-500 rounded-lg">
@@ -30,9 +30,11 @@
                     </button>
                     <ul id="toggleItems"
                         class="flex flex-col text-white items-start justify-start uppercase font-semibold px-1 py-5 bg-slate-400">
-                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                        <li id="dashboard-triger"
+                            class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
                             Dashboard</li>
-                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
+                        <li id="register-triger" class=" cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0
+                            border-b-2">
                             Register</li>
                         <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
                             tip</li>
@@ -42,7 +44,7 @@
                 </div>
 
                 <!-- right -->
-                <div class="w-full px-5 py-5">
+                <section id="dashboard" class="w-full px-5 py-5 ">
                     <!-- top -->
                     <form id="date-fillter-form" class="w-full py-2 flex gap-4">
                         <div class="flex gap-3"><span class="text-lg">From: </span> <input type="date" name="from-date"
@@ -51,7 +53,7 @@
                                 class="border border-black rounded-lg "></div>
                     </form>
                     <!-- bottom -->
-                    <section id="dashboard" class="w-full p-5 bg-red-200 grid grid-cols-3 gap-10">
+                    <div class="w-full p-5 bg-red-200 grid grid-cols-3 gap-10">
                         <div id="tip_modal_open"
                             class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2 cursor-pointer">
                             <h3 class="text-2xl font-semibold">Total Tip</h3>
@@ -138,9 +140,83 @@
                             <!-- Table END -->
 
                         </div>
-                    </section>
+                    </div>
 
-                </div>
+                </section>
+
+                <section id="register" class="w-full px-5 py-5">
+                    <!-- top -->
+                    <div id="date-fillter-form" class="w-full py-2 flex gap-4">
+                        <h1 class="text-3xl font-semibold underline">Register</h1>
+                    </div>
+                    <!-- bottom -->
+                    <form id="register-form" class="w-full p-5 bg-red-200 grid grid-cols-1 gap-10">
+
+                        <!-- CARS DETAIKLS -->
+                        <div class="flex flex-col">
+                            <label for="carNo-select">Car No :</label>
+                            <select name="car-no" id="carNo-select">
+                                <option value="">--Please choose an option--</option>
+                                <option value="wb1738">wb1738</option>
+                            </select>
+                        </div>
+
+                        <!-- DRIVER DETAILS -->
+                        <div class="flex gap-10">
+                            <div class="flex flex-col">
+                                <label for="driverName-select">Driver Name :</label>
+                                <select name="driver-name" id="driverName-select">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="abcd">abcd</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="driverNumber-select">Driver Number :</label>
+                                <input type="text" id="driverNumber-select" name="driver-number">
+                            </div>
+                        </div>
+
+                        <!-- HELPER DETAILS -->
+                        <div class="flex gap-10">
+                            <div class="flex flex-col">
+                                <label for="helperName-select">Driver Name :</label>
+                                <select name="helper-name" id="driverName-select">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="abcd">abcd</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="helperNumber-select">Driver Number :</label>
+                                <input type="text" id="helperNumber-select" name="driver-number">
+                            </div>
+                        </div>
+
+                        <!-- CAR OIL AMOUNT -->
+                        <div class="flex gap-10">
+                            <div class="flex flex-col">
+                                <label for="oilAmount-select">Car Oil Amount :</label>
+                                <input type="number" name="oil-amount-name" id="oilAmount-select"
+                                    placeholder="Enter oil amount" class="px-2">
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="in">IN :</label>
+                                <input type="time" id="in" name="in-time">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="out">Out :</label>
+                                <input type="time" id="out" name="in-time">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="bg-green-500">Submit</button>
+                    </form>
+
+                </section>
+
+
 
             </div>
 
