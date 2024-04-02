@@ -13,23 +13,4 @@ $(document).ready(function () {
         $('#tip_modal').hide(200);
     });
     // modal end
-
-    // page switch
-    $("#dashboard-triger").click(function (e) {
-        $("#dashboard-triger").addClass('active');
-        $("#register-triger").removeClass('active');
-
-
-        $("#register").hide(200);
-        $("#dashboard").show(200);
-    });
-    $("#register-triger").click(function (e) {
-        $("#dashboard-triger").removeClass('active');
-        $("#register-triger").addClass('active');
-
-
-        $("#dashboard").hide(200);
-        $("#register").show(200);
-    });
-
 });
