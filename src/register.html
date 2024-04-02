@@ -22,9 +22,9 @@
                 <img src="./North Super.png" alt="" class="h-[15vh]">
                 <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
             </nav>
-            <div id="body" class="flex items-start h-[83vh]">
+            <div id="body" class="flex items-start bg-gray-900">
                 <!-- left -->
-                <div class="bg-gray-900 h-full text-white">
+                <div class="text-white">
                     <button id="toggleBtn" class=" px-3 py-2  hover:bg-slate-500 rounded-lg">
                         <i class="fa-solid fa-bars"></i>
                     </button>
@@ -62,14 +62,13 @@
                 </div>
 
                 <!-- right -->
-                <section id="register" class="w-full px-5 py-5">
+                <section id="register" class="w-full p-5">
                     <!-- top -->
-                    <div id="date-fillter-form" class="w-full py-2 flex gap-4">
-                        <h1 class="text-3xl font-semibold underline">Register</h1>
-                    </div>
                     <!-- bottom -->
-                    <form id="register-form" class="w-full p-5 shadow-lg rounded grid grid-cols-1 gap-10">
-
+                    <form id="register-form" class="w-full p-5 shadow-lg rounded grid grid-cols-1 gap-4 bg-white">
+                        <div id="date-fillter-form" class="w-full py-2 flex gap-4">
+                            <h1 class="text-3xl font-semibold underline">Register</h1>
+                        </div>
                         <!-- CARS DETAIKLS -->
                         <div class="flex flex-col">
                             <label for="carNo-select" class="block mb-2 text-sm font-medium text-gray-900">Car No
@@ -144,8 +143,56 @@
                             </div>
                         </div>
 
-                        <button type=" submit"
-                                    class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+
+                        <div id=" date-fillter-form" class="w-full py-2 flex gap-4">
+                                <h1 class="text-2xl font-semibold underline">Shipping details</h1>
+                            </div>
+
+                            <div class="grid grid-cols-5 gap-2
+                            ">
+                                <div class="flex flex-col gap-3">
+                                    <h2 class="font-semibold mb-2">Name:</h2>
+
+                                    <div id="companyNameContainer" class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2">
+                                            <p>1.</p>
+                                            <select name="company-name-1"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                <option value="">--Please choose an option--</option>
+                                                <option value="abcd">abcd</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" onclick="addname()"
+                                        class="bg-gray-900 hover:bg-gray-950 shadow-2xl text-white py-2 rounded-lg">Add
+                                        Name</button>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="font-semibold mb-2">Doc:</h2>
+                                    <input type="number" name="doc"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="font-semibold mb-2">Box (unit):</h2>
+                                    <input type="number" name="box-unit"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="font-semibold mb-2">Whight (kg):</h2>
+                                    <input type="number" name="meterial-whight"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="font-semibold mb-2">EOA Bill No. :</h2>
+                                    <input type="number" name="doc"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
                     </form>
 
                 </section>
@@ -162,4 +209,4 @@
 
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="./javascripts/index.js"></script>
+<script src="./javascripts/register.js"></script>

@@ -22,9 +22,9 @@
                 <img src="./North Super.png" alt="" class="h-[15vh]">
                 <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
             </nav>
-            <div id="body" class="flex items-start h-[83vh]">
+            <div id="body" class="flex items-start h-[85vh] bg-gray-900">
                 <!-- left -->
-                <div class="bg-gray-900 h-full text-white">
+                <div class="text-white">
                     <button id="toggleBtn" class=" px-3 py-2  hover:bg-slate-500 rounded-lg">
                         <i class="fa-solid fa-bars"></i>
                     </button>
@@ -62,104 +62,110 @@
                 </div>
 
                 <!-- right -->
-                <section id="dashboard" class="w-full px-5 py-5 ">
-                    <!-- top -->
-                    <form id="date-fillter-form" class="w-full py-2 flex gap-4">
-                        <div class="flex gap-3"><span class="text-lg">From: </span> <input type="date" name="from-date"
-                                class="border border-black rounded-lg "></div>
-                        <div class="flex gap-3"><span class="text-lg">To: </span> <input type="date" name="from-date"
-                                class="border border-black rounded-lg "></div>
-                    </form>
-                    <!-- bottom -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                        <div id="tip_modal_open"
-                            class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5 cursor-pointer">
-                            <div class="text-2xl font-semibold mb-1">10</div>
-                            <div class="text-sm font-medium text-gray-400">Total Tip</div>
-                        </div>
+                <section id="dashboard" class="w-full p-5">
+                    <div class=" bg-white rounded px-3 py-24">
 
-                        <!-- modal -->
-                        <div id="tip_modal"
-                            class=" absolute w-[95%] h-[95%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 p-5 rounded-2xl">
-                            <!-- top -->
-                            <div class="w-full flex justify-between">
-                                <h2 class="text-4xl font-semibold px-4 text-white">Tip Details</h2>
-                                <!-- close btn -->
-                                <button id="tip_modal_close"
-                                    class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xl mr-2 rounded-xl">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
+                        <!-- top -->
+                        <form id="date-fillter-form" class="w-full py-2 flex gap-2 mb-7">
+                            <div class="flex gap-3"><span class="text-lg">From: </span> <input type="date"
+                                    name="from-date" class="border border-black rounded-lg "></div>
+                            <div class="flex gap-3"><span class="text-lg">To: </span> <input type="date"
+                                    name="from-date" class="border border-black rounded-lg "></div>
+                        </form>
+                        <!-- bottom -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                            <div id="tip_modal_open"
+                                class="bg-white rounded-md border border-gray-100 p-6 shadow-xl shadow-black/5 cursor-pointer">
+                                <div class="text-2xl font-semibold mb-1">10</div>
+                                <div class="text-sm font-medium text-gray-400">Total Tip</div>
                             </div>
-                            <br>
-                            <hr>
-                            <br>
-                            <!-- Table -->
 
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                                id="mid">
-                                <theadaz
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr>
-                                        <th scope="col" class="px-6 py-3">
-                                            Tip Number
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Status
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Print
-                                        </th>
-                                    </tr>
-                                </theadaz>
-                                <tbody>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            00001
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            processing
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
-                                                    class="fa-solid fa-print"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            00002
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            delivered
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
-                                                    class="fa-solid fa-print"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="bg-white rounded-md border border-gray-100 p-6 shadow-xl shadow-black/5">
 
-                            <!-- Table END -->
+                                <div class="flex items-center mb-1">
+                                    <div class="text-2xl font-semibold">324</div>
+                                </div>
+                                <div class="text-sm font-medium text-gray-400">Under Process</div>
 
-                        </div>
-                        <!-- Modal end -->
-                        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
-
-                            <div class="flex items-center mb-1">
-                                <div class="text-2xl font-semibold">324</div>
                             </div>
-                            <div class="text-sm font-medium text-gray-400">Under Process</div>
+                            <div class="bg-white rounded-md border border-gray-100 p-6 shadow-xl shadow-black/5">
+                                <div class="text-2xl font-semibold mb-1">555</div>
+                                <div class="text-sm font-medium text-gray-400">Delivered</div>
+                            </div>
 
-                        </div>
-                        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
-                            <div class="text-2xl font-semibold mb-1">555</div>
-                            <div class="text-sm font-medium text-gray-400">Delivered</div>
+
+                            <!-- modal -->
+                            <div id="tip_modal"
+                                class=" absolute w-[95%] h-[95%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 p-5 rounded-2xl">
+                                <!-- top -->
+                                <div class="w-full flex justify-between">
+                                    <h2 class="text-4xl font-semibold px-4 text-white">Tip Details</h2>
+                                    <!-- close btn -->
+                                    <button id="tip_modal_close"
+                                        class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xl mr-2 rounded-xl">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <br>
+                                <hr>
+                                <br>
+                                <!-- Table -->
+
+                                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                                    id="mid">
+                                    <theadaz
+                                        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3">
+                                                Tip Number
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Status
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Print
+                                            </th>
+                                        </tr>
+                                    </theadaz>
+                                    <tbody>
+                                        <tr
+                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                00001
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                processing
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
+                                                        class="fa-solid fa-print"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                00002
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                delivered
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
+                                                        class="fa-solid fa-print"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Table END -->
+
+                            </div>
+                            <!-- Modal end -->
                         </div>
                     </div>
+
                 </section>
 
 
