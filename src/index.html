@@ -30,14 +30,14 @@
                     </button>
                     <ul id="toggleItems" class="mt-4 p-4 uppercase font-semibold">
                         <li id="dashboard-triger" class="mb-1 group active">
-                            <a href="#"
+                            <a href="index.html"
                                 class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                                 <i class="ri-home-2-line mr-3 text-lg"></i>
                                 <span class="text-sm">Dashboard</span>
                             </a>
                         </li>
                         <li id="register-triger" class="mb-1 group">
-                            <a href="#"
+                            <a href="register.html"
                                 class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                                 <i class="ri-home-2-line mr-3 text-lg"></i>
                                 <span class="text-sm">Register</span>
@@ -89,94 +89,6 @@
                             <div class="text-sm font-medium text-gray-400">Delivered</div>
                         </div>
                     </div>
-                </section>
-
-                <section id="register" class="w-full px-5 py-5">
-                    <!-- top -->
-                    <div id="date-fillter-form" class="w-full py-2 flex gap-4">
-                        <h1 class="text-3xl font-semibold underline">Register</h1>
-                    </div>
-                    <!-- bottom -->
-                    <form id="register-form" class="w-full p-5 bg-red-200 grid grid-cols-1 gap-10">
-
-                        <!-- CARS DETAIKLS -->
-                        <div class="flex flex-col">
-                            <label for="carNo-select" class="block mb-2 text-sm font-medium text-gray-900">Car No
-                                :</label>
-                            <select name="car-no" id="carNo-select"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                <option selected>--Please choose an option--</option>
-                                <option value="wb1738">wb1738</option>
-                                <option value="wb1739">wb1739</option>
-                            </select>
-                        </div>
-
-                        <!-- DRIVER DETAILS -->
-                        <div class="flex gap-10">
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900"
-                                    for="driverName-select">Driver Name :</label>
-                                <select name="driver-name" id="driverName-select"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                    <option value="">--Please choose an option--</option>
-                                    <option value="abcd">abcd</option>
-                                </select>
-                            </div>
-
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900"
-                                    for="driverNumber-select">Driver Number :</label>
-                                <input type="text" id="driverNumber-select" name="driver-number"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                            </div>
-                        </div>
-
-                        <!-- HELPER DETAILS -->
-                        <div class="flex gap-10">
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900"
-                                    for="helperName-select">Helper Name :</label>
-                                <select name="helper-name" id="helperName-select"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                    <option value="">--Please choose an option--</option>
-                                    <option value="abcd">abcd</option>
-                                </select>
-                            </div>
-
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900"
-                                    for="helperNumber-select">Helper Number :</label>
-                                <input type="text" id="helperNumber-select" name="driver-number"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                            </div>
-                        </div>
-
-                        <!-- CAR OIL AMOUNT -->
-                        <div class="flex gap-10">
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900" for="oilAmount-select">Car
-                                    Oil Amount :</label>
-                                <input type="number" name="oil-amount-name" id="oilAmount-select"
-                                    placeholder="Enter oil amount"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                            </div>
-
-                            <div class="flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900" for="in">IN :</label>
-                                <input type="time" id="in" name="in-time"
-                                    class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "">
-                            </div>
-                            <div class=" flex flex-col">
-                                <label class="block mb-2 text-sm font-medium text-gray-900" for="out">Out :</label>
-                                <input type="time" id="out" name="in-time"
-                                    class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "">
-                            </div>
-                        </div>
-
-                        <button type=" submit"
-                                    class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Green</button>
-                    </form>
-
                 </section>
 
 

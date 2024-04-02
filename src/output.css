@@ -684,8 +684,20 @@ video {
   height: 1rem;
 }
 
+.h-\[83v\] {
+  height: 83v;
+}
+
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[83vh\] {
+  min-height: 83vh;
 }
 
 .w-64 {
