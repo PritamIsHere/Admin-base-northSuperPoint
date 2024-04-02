@@ -24,22 +24,40 @@
             </nav>
             <div id="body" class="flex items-start h-[83vh]">
                 <!-- left -->
-                <div class="bg-slate-400 h-full">
-                    <button id="toggleBtn" class="text-white px-3 py-2 bg-slate-400 hover:bg-slate-500 rounded-lg">
+                <div class="bg-gray-900 h-full text-white">
+                    <button id="toggleBtn" class=" px-3 py-2  hover:bg-slate-500 rounded-lg">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <ul id="toggleItems"
-                        class="flex flex-col text-white items-start justify-start uppercase font-semibold px-1 py-5 bg-slate-400">
-                        <li id="dashboard-triger"
-                            class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
-                            Dashboard</li>
-                        <li id="register-triger" class=" cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0
-                            border-b-2">
-                            Register</li>
-                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
-                            tip</li>
-                        <li class="cursor-pointer hover:bg-slate-500 px-5 py-2 w-full border-0 border-b-2">
-                            history</li>
+                    <ul id="toggleItems" class="mt-4 p-4 uppercase font-semibold">
+                        <li id="dashboard-triger" class="mb-1 group active">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                                <i class="ri-home-2-line mr-3 text-lg"></i>
+                                <span class="text-sm">Dashboard</span>
+                            </a>
+                        </li>
+                        <li id="register-triger" class="mb-1 group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                                <i class="ri-home-2-line mr-3 text-lg"></i>
+                                <span class="text-sm">Register</span>
+                            </a>
+                        </li>
+                        <li class="mb-1 group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <i class="ri-flashlight-line mr-3 text-lg"></i>
+                                <span class="text-sm">Tip</span>
+                            </a>
+                        </li>
+                        <li class="mb-1 group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <i class="ri-flashlight-line mr-3 text-lg"></i>
+                                <span class="text-sm">history</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -53,95 +71,24 @@
                                 class="border border-black rounded-lg "></div>
                     </form>
                     <!-- bottom -->
-                    <div class="w-full p-5 bg-red-200 grid grid-cols-3 gap-10">
-                        <div id="tip_modal_open"
-                            class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2 cursor-pointer">
-                            <h3 class="text-2xl font-semibold">Total Tip</h3>
-                            <hr class="border-spacing-2 w-[80%]">
-                            <h3 class="text-xl">40</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
+                            <div class="text-2xl font-semibold mb-1">10</div>
+                            <div class="text-sm font-medium text-gray-400">Total Tip</div>
                         </div>
-                        <div class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2">
-                            <h3 class="text-2xl font-semibold">Under Process</h3>
-                            <hr class="border-spacing-2 w-[80%]">
-                            <h3 class="text-xl">10</h3>
-                        </div>
-                        <div class="flex flex-col justify-center items-center bg-green-400 py-3 rounded-xl gap-2">
-                            <h3 class="text-2xl font-semibold">Delivered</h3>
-                            <hr class="border-spacing-2 w-[80%]">
-                            <h3 class="text-xl">30</h3>
-                        </div>
+                        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
 
-
-                        <!-- modal -->
-                        <div id="tip_modal"
-                            class=" absolute w-[95%] h-[95%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 p-5 rounded-2xl">
-                            <!-- top -->
-                            <div class="w-full flex justify-between">
-                                <h2 class="text-4xl font-semibold px-4 text-white">Tip Details</h2>
-                                <!-- close btn -->
-                                <button id="tip_modal_close"
-                                    class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xl mr-2 rounded-xl">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
+                            <div class="flex items-center mb-1">
+                                <div class="text-2xl font-semibold">324</div>
                             </div>
-                            <br>
-                            <hr>
-                            <br>
-                            <!-- Table -->
+                            <div class="text-sm font-medium text-gray-400">Under Process</div>
 
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                                id="mid">
-                                <theadaz
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr>
-                                        <th scope="col" class="px-6 py-3">
-                                            Tip Number
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Status
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Print
-                                        </th>
-                                    </tr>
-                                </theadaz>
-                                <tbody>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            00001
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            processing
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
-                                                    class="fa-solid fa-print"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            00002
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            delivered
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <a href="#" class="px-3 py-2 bg-red-500 text-white rounded-2xl">Print <i
-                                                    class="fa-solid fa-print"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- Table END -->
-
+                        </div>
+                        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
+                            <div class="text-2xl font-semibold mb-1">555</div>
+                            <div class="text-sm font-medium text-gray-400">Delivered</div>
                         </div>
                     </div>
-
                 </section>
 
                 <section id="register" class="w-full px-5 py-5">
@@ -154,64 +101,80 @@
 
                         <!-- CARS DETAIKLS -->
                         <div class="flex flex-col">
-                            <label for="carNo-select">Car No :</label>
-                            <select name="car-no" id="carNo-select">
-                                <option value="">--Please choose an option--</option>
+                            <label for="carNo-select" class="block mb-2 text-sm font-medium text-gray-900">Car No
+                                :</label>
+                            <select name="car-no" id="carNo-select"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option selected>--Please choose an option--</option>
                                 <option value="wb1738">wb1738</option>
+                                <option value="wb1739">wb1739</option>
                             </select>
                         </div>
 
                         <!-- DRIVER DETAILS -->
                         <div class="flex gap-10">
                             <div class="flex flex-col">
-                                <label for="driverName-select">Driver Name :</label>
-                                <select name="driver-name" id="driverName-select">
+                                <label class="block mb-2 text-sm font-medium text-gray-900"
+                                    for="driverName-select">Driver Name :</label>
+                                <select name="driver-name" id="driverName-select"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option value="">--Please choose an option--</option>
                                     <option value="abcd">abcd</option>
                                 </select>
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="driverNumber-select">Driver Number :</label>
-                                <input type="text" id="driverNumber-select" name="driver-number">
+                                <label class="block mb-2 text-sm font-medium text-gray-900"
+                                    for="driverNumber-select">Driver Number :</label>
+                                <input type="text" id="driverNumber-select" name="driver-number"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             </div>
                         </div>
 
                         <!-- HELPER DETAILS -->
                         <div class="flex gap-10">
                             <div class="flex flex-col">
-                                <label for="helperName-select">Driver Name :</label>
-                                <select name="helper-name" id="driverName-select">
+                                <label class="block mb-2 text-sm font-medium text-gray-900"
+                                    for="helperName-select">Helper Name :</label>
+                                <select name="helper-name" id="helperName-select"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option value="">--Please choose an option--</option>
                                     <option value="abcd">abcd</option>
                                 </select>
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="helperNumber-select">Driver Number :</label>
-                                <input type="text" id="helperNumber-select" name="driver-number">
+                                <label class="block mb-2 text-sm font-medium text-gray-900"
+                                    for="helperNumber-select">Helper Number :</label>
+                                <input type="text" id="helperNumber-select" name="driver-number"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             </div>
                         </div>
 
                         <!-- CAR OIL AMOUNT -->
                         <div class="flex gap-10">
                             <div class="flex flex-col">
-                                <label for="oilAmount-select">Car Oil Amount :</label>
+                                <label class="block mb-2 text-sm font-medium text-gray-900" for="oilAmount-select">Car
+                                    Oil Amount :</label>
                                 <input type="number" name="oil-amount-name" id="oilAmount-select"
-                                    placeholder="Enter oil amount" class="px-2">
+                                    placeholder="Enter oil amount"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="in">IN :</label>
-                                <input type="time" id="in" name="in-time">
+                                <label class="block mb-2 text-sm font-medium text-gray-900" for="in">IN :</label>
+                                <input type="time" id="in" name="in-time"
+                                    class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "">
                             </div>
-                            <div class="flex flex-col">
-                                <label for="out">Out :</label>
-                                <input type="time" id="out" name="in-time">
+                            <div class=" flex flex-col">
+                                <label class="block mb-2 text-sm font-medium text-gray-900" for="out">Out :</label>
+                                <input type="time" id="out" name="in-time"
+                                    class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "">
                             </div>
                         </div>
 
-                        <button type="submit" class="bg-green-500">Submit</button>
+                        <button type=" submit"
+                                    class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Green</button>
                     </form>
 
                 </section>
