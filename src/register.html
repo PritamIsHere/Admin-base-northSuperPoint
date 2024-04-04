@@ -44,14 +44,14 @@
                             </a>
                         </li>
                         <li class="mb-1 group">
-                            <a href="#"
+                            <a href="tip.html"
                                 class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                                 <i class="ri-flashlight-line mr-3 text-lg"></i>
                                 <span class="text-sm">Tip</span>
                             </a>
                         </li>
                         <li class="mb-1 group">
-                            <a href="#"
+                            <a href="history.html"
                                 class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                                 <i class="ri-flashlight-line mr-3 text-lg"></i>
                                 <span class="text-sm">history</span>
@@ -63,7 +63,6 @@
 
                 <!-- right -->
                 <section id="register" class="w-full p-5">
-                    <!-- top -->
                     <!-- bottom -->
                     <form id="register-form" class="w-full p-5 shadow-lg rounded grid grid-cols-1 gap-4 bg-white">
                         <div id="date-fillter-form" class="w-full py-2 flex gap-4">
@@ -210,3 +209,8 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="./javascripts/register.js"></script>
+<script>
+    $('#toggleBtn').click(function () {
+        $('#toggleItems').toggle(500);
+    });
+</script>

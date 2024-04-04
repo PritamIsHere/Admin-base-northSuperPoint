@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Registration</title>
+</head>
+
+
+<body>
+
+    <div id="main" class="w-full">
+        <div class="page1 min-h-screen relative  bg-gray-900">
+            <nav
+                class="w-full  bg-blue-600 px-4 py-1 text-white flex flex-col sm:flex-row items-center justify-between">
+                <img src="./North Super.png" alt="" class="h-[15vh]">
+                <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
+            </nav>
+            <div id="body" class="flex items-start">
+                <!-- left -->
+                <div class="text-white">
+                    <button id="toggleBtn" class=" px-3 py-2  hover:bg-slate-500 rounded-lg">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul id="toggleItems" class="mt-4 p-4 uppercase font-semibold">
+                        <li class="mb-1 group">
+                            <a href="index.html"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                                <i class="ri-home-2-line mr-3 text-lg"></i>
+                                <span class="text-sm">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="mb-1 group">
+                            <a href="register.html"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                                <i class="ri-home-2-line mr-3 text-lg"></i>
+                                <span class="text-sm">Register</span>
+                            </a>
+                        </li>
+                        <li class="mb-1 group active">
+                            <a href="tip.html"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <i class="ri-flashlight-line mr-3 text-lg"></i>
+                                <span class="text-sm">Tip</span>
+                            </a>
+                        </li>
+                        <li class="mb-1 group">
+                            <a href="history.html"
+                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <i class="ri-flashlight-line mr-3 text-lg"></i>
+                                <span class="text-sm">history</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- right -->
+                <section id="tip" class="w-full p-5">
+                    <div class=" bg-white p-5 rounded">
+
+                        <div id="date-fillter-form" class="w-full py-2 flex gap-4">
+                            <h1 class="text-3xl font-semibold underline">Tip</h1>
+                        </div>
+
+                        <form id="form-fillter" class="w-full py-2 flex gap-2 mb-7">
+                            <div class="flex gap-3"><span class="text-lg">From: </span> <input type="date"
+                                    name="from-date" class="border border-black rounded-lg "></div>
+                            <div class="flex gap-3"><span class="text-lg">To: </span> <input type="date"
+                                    name="from-date" class="border border-black rounded-lg "></div>
+                        </form>
+                        <form id="edit-form" class="w-full shadow-lg grid grid-cols-1 gap-4">
+                            <!-- Table -->
+
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                                id="mid">
+                                <theadaz
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Date
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Tip No.
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Status
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            POD (jpg)
+                                        </th>
+                                    </tr>
+                                </theadaz>
+                                <tbody>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            2/5/2024
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            123456
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <select
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                <option value="Proccesing">Proccesing</option>
+                                                <option value="Delivered">Delivered</option>
+                                            </select>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <input type="file">
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            2/5/2024
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            123456
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <select
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                <option value="Proccesing">Proccesing</option>
+                                                <option value="Delivered">Delivered</option>
+                                            </select>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <input type="file">
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            2/5/2024
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            123456
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <select
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                <option value="Proccesing">Proccesing</option>
+                                                <option value="Delivered">Delivered</option>
+                                            </select>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <input type="file">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Table END -->
+
+
+                            <button type="submit"
+                                class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                        </form>
+                    </div>
+
+                </section>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="./javascripts/tip.js"></script>
+<script>
+    $('#toggleBtn').click(function () {
+        $('#toggleItems').toggle(500);
+    });
+</script>
