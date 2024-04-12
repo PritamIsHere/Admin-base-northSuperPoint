@@ -9,7 +9,6 @@ dotenv.config({
     path: './env'
 })
 
-
 connectDB()
     .then(() => {
         app.listen(process.env.PORT || 8000, () => {
@@ -50,9 +49,9 @@ app.get('/companyesdata', (req, res) => {
 })
 
 app.post('/api', (req, res) => {
-    console.log('data is : ' + (req.body));
+    let d = req.body.data
+    console.log('data is : ' + d);
     res.sendStatus(200);
 })
-
 
 

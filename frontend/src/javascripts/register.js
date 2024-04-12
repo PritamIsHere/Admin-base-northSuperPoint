@@ -122,10 +122,10 @@ $('#tip-details-form').submit(function (e) {
     }
 
     $.ajax({
-        url: 'http://localhost:3000/api/data',
-        method: 'post',
+        url: 'http://localhost:3000/api',
+        method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ data: tip }),
+        data: JSON.stringify({ data: 'tip' }),
         success: function () {
             console.log('Data sent successfully');
         },
@@ -135,56 +135,34 @@ $('#tip-details-form').submit(function (e) {
     });
 
 
+
     console.log(tip);
 
 });
 
-// $('#tip-details-form').submit(function (e) {
-//     e.preventDefault();
-//     var carNo = $('[name="car-no"]').val();
-//     var driverName = $('[name="driver-name"]').val();
-//     var driverNum = $('[name="driver-number"]').val();
-//     var helperName = $('[name="helper-name"]').val();
-//     var helperNum = $('[name="helper-number"]').val();
-//     var oilAmount = $('[name="oil-amount"]').val();
-//     var inTime = $('[name="in-time"]').val();
-//     var outTime = $('[name="out-time"]').val();
-//     var companyNames = []
-//     var docNo = $('[name="doc"]').val()
-//     var box = $('[name="box-unit"]').val()
-//     var whight = $('[name="meterial-whight"]').val()
-//     var eoaBill = $('[name="bill-no"]').val()
-//     // adding company names
-//     for (let i = 1; i <= $('#companyNameContainer > *').length; i++) {
-//         companyNames.push($(`[name="company-name-${i}"]`).val())
-//     }
+$('#shipping-details-form').submit(function (e) {
+    e.preventDefault();
+    var companyNames = []
+    var docNo = []
+    var box = []
+    var whight = []
+    var eoaBill = []
+    // adding value from form
+    for (let i = 1; i <= $('#companyNameContainer > *').length; i++) {
+        companyNames.push($(`[name="company-name-${i}"]`).val())
+        docNo.push($(`[name="doc-${i}"]`).val())
+        box.push($(`[name="box-unit-${i}"]`).val())
+        whight.push($(`[name="meterial-whight-${i}"]`).val())
+        eoaBill.push($(`[name="bill-no-${i}"]`).val())
+    }
 
-//     // Form data
-//     var tip = {
-//         carNo: carNo,
-//         driver: {
-//             driverName: driverName,
-//             driverNum: driverNum
-//         },
-//         helper: {
-//             helperName: helperName,
-//             helperNum: helperNum
-//         },
-//         oliAmount: oilAmount,
-//         time: {
-//             in: inTime,
-//             out: outTime
-//         },
-//         shippingDetails: {
-//             companys: companyNames,
-//             docNumber: docNo,
-//             boxNo: box,
-//             whight: whight,
-//             EOA: eoaBill
-//         },
+    var shippingDetails = {
+        docateNo: docNo,
+        companys: companyNames,
+        boxUnit: box,
+        whight: whight,
+        EOAbill: eoaBill
+    }
+    console.log(shippingDetails);
 
-//     }
-
-//     console.log(tip);
-
-// });
+});
