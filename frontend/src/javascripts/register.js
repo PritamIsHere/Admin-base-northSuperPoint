@@ -89,80 +89,86 @@ $.getJSON("http://localhost:3000/companyesdata", (data) => {
 }
 );
 
-$('#tip-details-form').submit(function (e) {
-    e.preventDefault();
-    var carNo = $('[name="car-no"]').val();
-    var driverName = $('[name="driver-name"]').val();
-    var driverNum = $('[name="driver-number"]').val();
-    var helperName = $('[name="helper-name"]').val();
-    var helperNum = $('[name="helper-number"]').val();
-    var oilAmount = $('[name="oil-amount"]').val();
-    var inTime = $('[name="in-time"]').val();
-    var outTime = $('[name="out-time"]').val();
+
+$(document).ready(function () {
 
 
+    $('#tip-details-form').submit(function (e) {
+        e.preventDefault();
+        var carNo = $('[name="car-no"]').val();
+        var driver = driverinfo.filter((driver) => {
+            if ($('[name="driver-name"]').val() == driver.name) {
+                return driver.driverID
+            }
+        })
+        var helper = helperinfo.filter((helper) => {
+            if ($('[name="helper-name"]').val() == helper.name) {
+                return helper.helperID
+            }
+        })
+        var driverId = driver[0].driverID
+        var helperId = helper[0].helperID;
+        var oilAmount = $('[name="oil-amount"]').val();
+        var inTime = $('[name="in-time"]').val();
+        var outTime = $('[name="out-time"]').val();
 
-    // Form data
-    var tip = {
-        carNo: carNo,
-        driver: {
-            driverName: driverName,
-            driverNum: driverNum
-        },
-        helper: {
-            helperName: helperName,
-            helperNum: helperNum
-        },
-        oliAmount: oilAmount,
-        time: {
-            in: inTime,
-            out: outTime
+        // Form data
+        var tip = {
+            carNo: carNo,
+            driverID: driverId,
+            helperID: helperId,
+            oliAmount: oilAmount,
+            time: {
+                in: inTime,
+                out: outTime
+            }
+
         }
 
-    }
+        $.ajax({
+            url: 'http://localhost:3000/api',
+            method: 'GET',
+            contentType: 'application/json',
+            data: JSON.stringify(tip),
+            success: function () {
+                console.log('Data sent successfully');
+            },
+            error: function () {
+                console.error('Failed to send data');
+            }
+        });
 
-    $.ajax({
-        url: 'http://localhost:3000/api',
-        method: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({ data: 'tip' }),
-        success: function () {
-            console.log('Data sent successfully');
-        },
-        error: function () {
-            console.error('Failed to send data');
-        }
+
+
+
+        console.log(tip);
+
     });
 
+    $('#shipping-details-form').submit(function (e) {
+        e.preventDefault();
+        var companyNames = []
+        var docNo = []
+        var box = []
+        var whight = []
+        var eoaBill = []
+        // adding value from form
+        for (let i = 1; i <= $('#companyNameContainer > *').length; i++) {
+            companyNames.push($(`[name="company-name-${i}"]`).val())
+            docNo.push($(`[name="doc-${i}"]`).val())
+            box.push($(`[name="box-unit-${i}"]`).val())
+            whight.push($(`[name="meterial-whight-${i}"]`).val())
+            eoaBill.push($(`[name="bill-no-${i}"]`).val())
+        }
 
+        var shippingDetails = {
+            docateNo: docNo,
+            companys: companyNames,
+            boxUnit: box,
+            whight: whight,
+            EOAbill: eoaBill
+        }
+        console.log(shippingDetails);
 
-    console.log(tip);
-
-});
-
-$('#shipping-details-form').submit(function (e) {
-    e.preventDefault();
-    var companyNames = []
-    var docNo = []
-    var box = []
-    var whight = []
-    var eoaBill = []
-    // adding value from form
-    for (let i = 1; i <= $('#companyNameContainer > *').length; i++) {
-        companyNames.push($(`[name="company-name-${i}"]`).val())
-        docNo.push($(`[name="doc-${i}"]`).val())
-        box.push($(`[name="box-unit-${i}"]`).val())
-        whight.push($(`[name="meterial-whight-${i}"]`).val())
-        eoaBill.push($(`[name="bill-no-${i}"]`).val())
-    }
-
-    var shippingDetails = {
-        docateNo: docNo,
-        companys: companyNames,
-        boxUnit: box,
-        whight: whight,
-        EOAbill: eoaBill
-    }
-    console.log(shippingDetails);
-
+    });
 });
