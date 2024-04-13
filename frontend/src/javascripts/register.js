@@ -125,13 +125,14 @@ $(document).ready(function () {
 
         }
 
+
         $.ajax({
             url: 'http://localhost:3000/api',
             method: 'GET',
             contentType: 'application/json',
             data: JSON.stringify(tip),
-            success: function () {
-                console.log('Data sent successfully');
+            success: function (data) {
+                console.log(data.massage);
             },
             error: function () {
                 console.error('Failed to send data');

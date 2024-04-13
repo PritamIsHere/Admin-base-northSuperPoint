@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/output.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./frontend/src/css/output.css">
+    <link rel="stylesheet" href="./frontend/src/css/index.css">
     <title>Dashboard</title>
 </head>
 
@@ -18,9 +18,9 @@
     <div id="main" class="w-full">
         <div class="page1 min-h-screen relative">
             <nav
-                class="w-full  bg-blue-600 px-4 py-1 text-white flex flex-col sm:flex-row items-center justify-between">
-                <img src="../North Super.png" alt="" class="h-[15vh]">
-                <h1 class="uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
+                class="w-full  bg-[#F6F5F2] px-4 py-1 text-white flex flex-col sm:flex-row items-center justify-between">
+                <img src="./frontend/public/logo.png" alt="" class="h-[15vh]">
+                <h1 class=" text-black uppercase sm:text-5xl text-3xl shadow-lg font-bold">morning tip</h1>
             </nav>
             <div id="body" class="flex items-start h-[85vh] bg-gray-900">
                 <!-- left -->
@@ -30,7 +30,7 @@
                     </button>
                     <ul id="toggleItems" class="mt-4 p-4 uppercase font-semibold">
                         <li id="dashboard-triger" class="mb-1 group active">
-                            <a href="index.html"
+                            <a href="/index.html"
                                 class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                                 <i class="ri-home-2-line mr-3 text-lg"></i>
                                 <span class="text-sm">Dashboard</span>
@@ -50,14 +50,6 @@
                                 <span class="text-sm">Tip</span>
                             </a>
                         </li>
-                        <li class="mb-1 group">
-                            <a href="history.html"
-                                class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                <i class="ri-flashlight-line mr-3 text-lg"></i>
-                                <span class="text-sm">history</span>
-                            </a>
-                        </li>
-
                     </ul>
                 </div>
 
@@ -180,4 +172,4 @@
 
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="../javascripts/index.js"></script>
+<script src="./frontend/src/javascripts/index.js"></script>

@@ -59,13 +59,18 @@ app.get('/api', async (req, res) => {
     const data = JSON.parse(jsonString);
     var sql = "INSERT INTO `tip_details`(`vehicleNumber`, `driverID`, `helperID`, `carOilAmount`, `inTime`, `outTime`) VALUES" + `('${data.carNo}','${data.driverID}','${data.helperID}','${data.oliAmount}','${data.time.in}','${data.time.out}')`
 
+
     con.query(sql, function (error, results) {
         if (error) throw error;
-        console.log('The solution is: ', results);
+        console.log('The solution is: ', results.insertId);
+        let data = { massage: results.insertId }
+        res.json(data)
     })
+
 
     console.log(sql);
     res.sendStatus(200);
 })
+
 
 
